@@ -1,4 +1,4 @@
-# My Go API
+# Rate Limiting Algorithms
 
 ## Overview
 
