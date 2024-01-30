@@ -3,7 +3,7 @@ package handlers
 import (
     "encoding/json"
     "net/http"
-    "my-go-api/internal/services/nameservice"
+    "go-api/internal/services/nameservice"
 )
 
 func GetNames(w http.ResponseWriter, r *http.Request) {

@@ -3,7 +3,7 @@ package nameservice
 import (
     "math/rand"
     "time"
-    "my-go-api/pkg/utils"
+    "go-api/pkg/utils"
 )
 
 func GenerateRandomNames(count int, length int) []string {

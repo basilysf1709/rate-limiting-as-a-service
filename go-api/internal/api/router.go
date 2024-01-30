@@ -1,7 +1,7 @@
 package api
 
 import (
-    "my-go-api/internal/api/handlers"
+    "go-api/internal/api/handlers"
     "github.com/gorilla/mux"
 )
 

@@ -3,7 +3,7 @@ package main
 import (
     "log"
     "net/http"
-    "my-go-api/internal/api"
+    "go-api/internal/api"
 )
 
 func main() {
