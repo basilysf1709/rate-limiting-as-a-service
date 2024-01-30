@@ -1,8 +1,6 @@
 package nameservice
 
 import (
-    "math/rand"
-    "time"
     "go-api/pkg/utils"
 )
 

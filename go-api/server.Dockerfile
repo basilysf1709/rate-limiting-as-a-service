@@ -12,7 +12,9 @@ RUN go mod download
 COPY . .
 
 # Build the Go app
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o myapi ./cmd/server
+# CGO_ENABLED=0, creates a statically linked binary which basically means that the binary has everything it needs to run, so that a base alpine image can be used and 
+# there is no need to install any libraries promoting (ease of deployment and security)
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o go-api ./cmd/server
 
 # Start a new stage from scratch for smaller image size
 FROM alpine:latest  
@@ -21,7 +23,7 @@ RUN apk --no-cache add ca-certificates
 WORKDIR /root/
 
 # Copy the pre-built binary file from the previous stage
-COPY --from=builder /app/myapi .
+COPY --from=builder /app/go-api .
 
 # Command to run the executable
-CMD ["./myapi"]
+CMD ["./go-api"]
