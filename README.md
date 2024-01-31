@@ -3,9 +3,10 @@
 ## Overview
 
 Ground implementation of rate limiting algorithms for a simple go api
-1. Token Bucket Algorithm
-- Tokens are added at a fixed rate
+1. Token Bucket Algorithm (Inspired by Alex Xu's - System Design Interview Book)
+- Tokens are added at a fixed rate over time
 - Implementation is in go-api/nameservice/TokenBucket.go
+- If there are no tokens in the bucket, the api gets rate-limited and sends HTTP 429 response. (Too many requests)
 
 ## Getting Started
 
