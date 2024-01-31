@@ -21,5 +21,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. Clone the repository:
    ```bash
-   git clone `https://github.com/basilysf1709/rate-limiting-as-a-service.git`
-2. run `make`
+   git clone https://github.com/basilysf1709/rate-limiting-as-a-service.git
+2. Docker Compose
+   ```bash
+   make
+3. Docker Compose Down
+   ```bash
+   make down
