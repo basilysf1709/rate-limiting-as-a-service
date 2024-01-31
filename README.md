@@ -3,6 +3,9 @@
 ## Overview
 
 Ground implementation of rate limiting algorithms for a simple go api
+1. Token Bucket Algorithm
+- Tokens are added at a fixed rate
+- Implementation is in go-api/nameservice/TokenBucket.go
 
 ## Getting Started
 
